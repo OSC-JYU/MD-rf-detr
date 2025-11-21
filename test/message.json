@@ -1,0 +1,15 @@
+{
+  "service": {
+    "id":"md-rf-detr-cpu"
+  },
+  "task": {
+    "id":"detect_polygons"
+  },
+  "file": {
+    "type":"image",
+    "label":"htr3.jpg"
+  },
+  "process": {
+    "@rid": "#112:4228"
+  }
+}

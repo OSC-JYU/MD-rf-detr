@@ -9,6 +9,8 @@ The codebase is from https://github.com/Kansallisarkisto-AI/rfdetr_trocr_pipelin
 
 model: https://huggingface.co/Kansallisarkisto/rfdetr_textline_textregion_detection_model
 
+NOTE: very experimental!
+
 
 ### Functionality
 
@@ -25,23 +27,13 @@ endpoint is http://localhost:9011/process
 
 Payload is queue message as json file. 
 
-## Running as service (locally)
 
-
-Then build and start
-
-	make build
-	make start
-
-or start container directly
-
- 	docker run --name md-rf_detr -p 9011:9011  
 
 
 
 ### Example API call 
 
-Run from MD-RF_DETR directory:
+Run from MD-rf_detr directory:
 
 Detect line polygons:
 
@@ -51,9 +43,7 @@ Detect line polygons:
 	  http://localhost:9011/process
 
 
-Similarity index creation (httpie version):
 
-	http POST :9009/process message@test/similarity.json content@test/text_fi.txt --form
 
 
 

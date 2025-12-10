@@ -46,7 +46,14 @@ def preprocess_resize_torch_transform(image, max_size=1024, normalize=True):
 
     # Add resize if needed
     if h > max_size or w > max_size:
-        transform_list.append(transforms_v2.Resize(size=None, max_size=max_size, antialias=True))
+        # Calculate size to maintain aspect ratio with max dimension = max_size
+        if h >= w:
+            new_h = max_size
+            new_w = int(w * max_size / h)
+        else:
+            new_w = max_size
+            new_h = int(h * max_size / w)
+        transform_list.append(transforms_v2.Resize(size=(new_h, new_w), antialias=True))
 
     # Add normalization
     if normalize:

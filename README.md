@@ -11,13 +11,15 @@ model: https://huggingface.co/Kansallisarkisto/rfdetr_textline_textregion_detect
 
 NOTE: very experimental!
 
+## install and run cpu version 
 
-### Functionality
+	python -m venv venv
+	source venv/bin/activate
+	pip install -r requirements_cpu.txt
 
-The API offers three main services:
+run
 
-1. **Detect lines** - Create line polygons.
-
+	python api.py
 
 
 
@@ -30,15 +32,12 @@ Payload is queue message as json file.
 
 
 
-
-### Example API call 
+### Direct API call 
 
 Run from MD-rf_detr directory:
 
-Detect line polygons:
-
 	curl -X POST -H "Content-Type: multipart/form-data" \
-	  -F "message=@test/detect.json;type=application/json" \
+	  -F "message=@test/message.json;type=application/json" \
 	  -F "content=@test/htr3.jpg;type=image/jpeg" \
 	  http://localhost:9011/process
 

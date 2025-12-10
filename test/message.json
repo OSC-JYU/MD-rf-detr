@@ -3,7 +3,7 @@
     "id":"md-rf-detr-cpu"
   },
   "task": {
-    "id":"detect_polygons"
+    "id":"line_segmentation"
   },
   "file": {
     "type":"image",

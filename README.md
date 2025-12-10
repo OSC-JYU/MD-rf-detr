@@ -19,7 +19,7 @@ NOTE: very experimental!
 
 fetch model
 
-	wget -P models/ https://huggingface.co/Kansallisarkisto/rfdetr_textline_textregion_detection_model/blob/main/rfdetr_text_seg_model_202510.pth
+	wget -P models/ https://huggingface.co/Kansallisarkisto/rfdetr_textline_textregion_detection_model/resolve/main/rfdetr_text_seg_model_202510.pth
 
 	mv models/rfdetr_text_seg_model_202510.pth models/rfdetr_text_seg_model.pth
 

@@ -17,6 +17,13 @@ NOTE: very experimental!
 	source venv/bin/activate
 	pip install -r requirements_cpu.txt
 
+fetch model
+
+	wget -P models/ https://huggingface.co/Kansallisarkisto/rfdetr_textline_textregion_detection_model/blob/main/rfdetr_text_seg_model_202510.pth
+
+	mv models/rfdetr_text_seg_model_202510.pth models/rfdetr_text_seg_model.pth
+
+
 run
 
 	python api.py
